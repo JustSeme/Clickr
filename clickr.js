@@ -22,6 +22,10 @@ function start() {
     const timeout = setTimeout(() => {
         button.onclick = null
         display.textContent = 'Game Over!'
+        button.textContent = 'Restart'
+        button.onclick = setTimeout(function(){
+            location.reload();
+        }, 2000);
 
         clearInterval(interval)
         clearTimeout(timeout)
